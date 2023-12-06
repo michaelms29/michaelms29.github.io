@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    SerenAId
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/euphoric.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h1 class="typing-text">Welcome to SerenAId, {{ name }}.</h1>
+    <br>
+    <p class="typing-text">We are <b>supercharging</b> mental wellness with the power of artificial intelligence. Our goal is to harness the power of machine learning to reimagine how humans engage with their emotions.</p>
+    <br>
+    <a href="/vrs"><button class="rainbow-button">Initiate Application</button></a>
+{% endblock %}

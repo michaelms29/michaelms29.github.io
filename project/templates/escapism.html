@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    EscAIpism
+{% endblock %}
+
+{% block main %}
+    <style> body, .typing-text { color: white } </style>
+    <audio autoplay loop>
+        <source src="static/way.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <h2>EscAIpism</h2>
+    <p class="typing-text">We all love the feeling of reading a good book, binge-watching our favorite shows, and getting lost in the fictitious worlds that exist only between us and the characters. <br><br> But we all hate the feeling of finishing that show or turning that last page. EscAIpism aims to bring those imaginative worlds to life and satiate your escapism.
+        <br><br>
+        Alternate endings? We have it.<br>
+        Endless images? We also have that.<br>
+        Realize anything.<br>
+        <strong>Visualize your mind with the power of SerenAId.</strong>
+        <br><br>
+        <form action="/escapism" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto small-input" id="media" name="media" placeholder="Start by sharing a piece of media." type="text">
+            </div>
+            <button class="btn btn-primary rainbow-button" type="submit">Spark ImaginAItion</button>
+        </form>
+    </p>
+{% endblock %}

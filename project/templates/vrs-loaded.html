@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Virtual Relaxation Space
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/calm.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Welcome to the Virtual Relaxation Space</h2>
+    <br>
+    <div class="container">
+        <img src="{{ image_url }}" alt="AI Generated Image" id="ai_image">
+        <div>
+            <p class="typing-text">{{ quote }}</p>
+            <br>
+            <br>
+            <h2>Recommended Activities</h2>
+            <a href="/journal">Try journaling to process your emotions!</a>
+            <br>
+            <a href="/checkin">Complete your daily check in to log your emotions</a>
+            <br>
+            <a href="/escapism">Use our escapism feature to research your favorite shows and movies and books!</a>
+        </div>
+    </div>
+
+{% endblock %}

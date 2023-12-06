@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Check Ins
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/abstract.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    {% if checkedin %}
+    <h1>You've already checked in for {{ date }}</h1>
+    <br>
+    <h3>Let's try to understand your emotional progression</h3>
+    <br>
+    <p class="typing-text">{{ current_analysis.analysis }}</p>
+    {% else %}
+    <h2>Check In for {{ date }}</h2>
+    <div class="container">
+        <p class="typing-text">Take a moment to pause and reflect. How are you feeling today?</p>
+    </div>
+    <form action="/checkin" method="post">
+        <div class="mb-3">
+            <br>
+            <label for="mood">Overall Mood:</label>
+            <br><br>
+            <span>Poor</span>
+            <input type="range" id="mood" name="mood" min="0" max="100" step="10" value="50">
+            <span>Great</span>
+
+            <br><br>
+            <label>Specific Feelings:</label>
+            <div>
+                <input type="checkbox" id="anxious" name="emotions[]" value="Anxious">
+                <label for="anxious">Anxious</label>
+
+                <input type="checkbox" id="tired" name="emotions[]" value="Tired">
+                <label for="tired">Tired</label>
+
+                <input type="checkbox" id="nervous" name="emotions[]" value="Nervous">
+                <label for="nervous">Nervous</label>
+
+                <input type="checkbox" id="excited" name="emotions[]" value="Excited">
+                <label for="excited">Excited</label>
+
+                <input type="checkbox" id="energetic" name="emotions[]" value="Energetic">
+                <label for="energetic">Energetic</label>
+            </div>
+            <br>
+            <input class="form-control mx-auto w-auto" id="notes" name="notes" placeholder="Additional Comments" type="text">
+        </div>
+        <button class="btn btn-primary rainbow-button" type="submit">Log Feelings for {{ date }}</button>
+    </form>
+    {% endif %}
+
+
+{% endblock %}

@@ -1,0 +1,162 @@
+* {
+    font-family: 'Space Mono', monospace;
+}
+
+input {
+    text-align: center;
+}
+
+#navLogo {
+    width: 50px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+/* Size for brand */
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue {
+    color: #537fbe;
+}
+
+nav .navbar-brand .red {
+    color: #ea433b;
+}
+
+nav .navbar-brand .yellow {
+    color: #f5b82e;
+}
+
+nav .navbar-brand .green {
+    color: #2e944b;
+}
+
+nav li {
+    padding: 10px;
+}
+
+#indexTable {
+    width: 100%;
+}
+
+#indexTable th {
+    background-color: grey;
+    border: 0.5px solid;
+}
+
+#indexTable td {
+    border: 0.5px solid;
+}
+
+#indexTable tfoot {
+    background-color: #e6f7ff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+#logo {
+    border-radius: 20px;
+    width: 50%;
+    margin: 50px;
+}
+
+#emotion {
+    width: 60%;
+}
+
+/* Give the illusion of text being typed in real time */
+.typing-text {
+    color: #0000;
+    width: 70%;
+    margin: 0 auto;
+    background:
+        linear-gradient(var(--bs-body-color) 0 0) no-repeat;
+    background-size: 0% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: typing 1.5s .5s both;
+}
+
+@keyframes typing {
+    to {
+        background-size: 100% 100%
+    }
+
+    /* we animate to 100% 100%*/
+}
+
+
+/* Create color pulsing buttons */
+.rainbow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #f06, yellow, #3cf);
+    background-size: 200% 200%;
+    animation: rainbowAnimation 7s ease infinite;
+    transition: color 0.3s;
+}
+
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.rainbow-button:hover {
+    color: black;
+}
+
+#journal {
+    width: 90%;
+}
+
+#journal-content {
+    width: 75%;
+    border: 1px solid var(--bs-body-color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#ai_image {
+    width: 50%;
+}
+
+.small-input {
+    width: 40%;
+}
+
+#gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.loaded_gif {
+    justify-content: space-around;
+    width: 25%;
+    height: 25%;
+    padding: 20px;
+}

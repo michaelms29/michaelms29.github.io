@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Journal
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/calm.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Welcome to the Journal</h2>
+    <br>
+    <div class="container">
+        <form action="/journal" method="post" id="journal" autocomplete="off">
+            <textarea name="journal-content" id="journal-content">{{ journal }}</textarea>
+            <br>
+            <br>
+            <button class="btn btn-primary" type="submit">Save Journal</button>
+        </form>
+    </div>
+
+{% endblock %}

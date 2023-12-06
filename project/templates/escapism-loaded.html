@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    EscAIpism
+{% endblock %}
+
+{% block main %}
+
+    <audio autoplay loop>
+        <source src="static/way.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <h2>EscAIpism for {{ media }}</h2>
+    <p class="typing-text">
+        We are here to visualize
+    </p>
+    <div id="gif-container">
+        {% for gif in gifs %}
+            <img src="{{ gif }}" alt="GIF" class="loaded_gif">
+        {% endfor %}
+    </div>
+
+    <img src="static/giphy.gif" alt="Giphy Logo">
+{% endblock %}

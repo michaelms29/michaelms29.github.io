@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Virtual Relaxation Space
+{% endblock %}
+
+{% block main %}
+    <audio autoplay loop>
+        <source src="static/morning.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Welcome to the Virtual Relaxation Space</h2>
+    <br>
+    <p class="typing-text">Let's get this started. Share a bit about how you are feeling today so we can create your dreamscape playground. Don't worry, this is just the beginning.</p>
+    <br>
+    <form action="/vrs" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto" id="emotion" name="emotion" placeholder="Share your feelings." type="text">
+        </div>
+        <button class="btn btn-primary rainbow-button" type="submit">Unlock Dreamscape</button>
+    </form>
+{% endblock %}
